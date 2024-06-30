@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './diabetic-list.component.css'
 })
 export class DiabeticListComponent {
+  lectures: any;
 
 }

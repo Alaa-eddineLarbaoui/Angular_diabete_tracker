@@ -1,13 +1,28 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { BrowserModule,provideClientHydration } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+import { AppComponent } from './app.component';
+import { GlycemieComponent } from "./glycemie/glycemie.component";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {GlycemieService} from "./glycemie.service";
+
+@NgModule({
+  declarations: [
+    GlycemieComponent
+  ],
+
+  imports: [
+    CommonModule,
+    HttpClientModule
+  ],
+  exports: [
+    GlycemieComponent
+  ],
+  providers: [
+    GlycemieService,
+    provideClientHydration()
+  ]
 })
-export class AppComponent {
-  title = 'diabetic-angular';
-}
+
+export class AppModule { }

@@ -11,7 +11,7 @@ describe('DiabeticFormComponent', () => {
       imports: [DiabeticFormComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(DiabeticFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
